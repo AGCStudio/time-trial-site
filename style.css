@@ -90,7 +90,7 @@ section.block .card p { color: var(--text); font-size: 16px; margin-bottom: 10px
 .legal li { margin-bottom: 4px; }
 .legal .card p:last-child { margin-bottom: 0; }
 .legal section + section { margin-top: 64px; }
-.legal ul { padding-left: 22px; margin: 0 0 12px; }
+.legal ul, .legal ol { padding-left: 22px; margin: 0 0 12px; }
 .updated { color: var(--muted); margin: 0 0 24px; }
 .legal table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .legal th, .legal td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
