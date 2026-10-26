@@ -3,108 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Time Trial — Endurance training, adapted to you</title>
-<meta name="description" content="Time Trial is a mobile app for endurance athletes and coaches: structured workouts, adaptive training plans and multisport training load, on every watch.">
-<style>
-  :root {
-    --bg: #0e1116;
-    --surface: #171b22;
-    --text: #eef1f5;
-    --muted: #a3acb9;
-    --accent: #ff5a36;
-    --line: #262c36;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-  header { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-weight: 800; letter-spacing: 0.02em; font-size: 20px; }
-  .logo span { color: var(--accent); }
-  nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 15px; }
-  nav a:hover { color: var(--text); }
-  .hero { padding: 72px 0 56px; }
-  .tag {
-    display: inline-block; font-size: 13px; color: var(--accent);
-    border: 1px solid var(--accent); border-radius: 999px; padding: 4px 12px; margin-bottom: 20px;
-  }
-  h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; margin: 0 0 20px; letter-spacing: -0.02em; }
-  .lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; padding: 24px 0 64px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-  .card h3 { margin: 0 0 8px; font-size: 18px; }
-  .card p { margin: 0; color: var(--muted); font-size: 15px; }
-  section.block { border-top: 1px solid var(--line); padding: 48px 0; }
-  section.block h2 { margin: 0 0 12px; font-size: 24px; }
-  section.block p { color: var(--muted); max-width: 680px; margin: 0 0 12px; }
-  a { color: var(--accent); }
-  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
-  footer a { color: var(--muted); }
-</style>
+<title>Time Trial</title>
+<meta name="description" content="Time Trial — training app for endurance athletes and coaches. Every watch, one calendar.">
+<meta name="theme-color" content="#E8E9EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">TIME<span>/</span>TRIAL</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </header>
+<div class="wrap">
+  <header class="top">
+    <a class="pill" href="index.html"><img src="icon.svg" alt="">Time Trial</a>
+    <span class="spacer"></span>
+    <a class="circle" href="mailto:info@amilcarecanali.com">Contact</a>
+  </header>
 
-    <section class="hero">
-      <div class="tag">In development · Beta 2027</div>
-      <h1>Endurance training,<br>adapted to you.</h1>
-      <p class="lead">Time Trial is a mobile app for endurance athletes and their coaches. Plan structured workouts from your phone, follow a plan that adapts when life gets in the way, and understand your training load in every discipline — on any watch.</p>
-    </section>
+  <h1>Train with any watch.<br>Plan on your phone.</h1>
+  <p class="lead">Time Trial is a training app for endurance athletes and their coaches: swim, bike, run, triathlon and everything in between. One calendar for what you planned and what you did, whichever device recorded it.</p>
+  <p><span class="tag">In development</span></p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Build workouts on your phone</h3>
-        <p>Create and edit structured sessions by power, pace, heart rate or effort — or just describe them in plain words — and send them to your watch.</p>
-      </div>
-      <div class="card">
-        <h3>A plan that adapts</h3>
-        <p>Missed a session, slept badly, short on time? Your plan rebalances itself and tells you why. You choose how much to delegate.</p>
-      </div>
-      <div class="card">
-        <h3>Multisport, done right</h3>
-        <p>Swim, bike and run load tracked separately and together, with flexible zones for indoor and outdoor, and every endurance sport covered.</p>
-      </div>
-      <div class="card">
-        <h3>Athletes and coaches</h3>
-        <p>Coaches manage their athletes' calendars, review sessions and approve the plan adjustments. Athletes stay in control of what they share.</p>
-      </div>
-      <div class="card">
-        <h3>Every watch, equally</h3>
-        <p>Designed to work with Apple Watch, Garmin and other devices, with full export of your data whenever you want it.</p>
-      </div>
-      <div class="card">
-        <h3>Your data stays yours</h3>
-        <p>Hosted in the EU, never sold, never used for advertising. Read our <a href="privacy.html">privacy policy</a>.</p>
-      </div>
-    </div>
-
-    <section class="block" id="about">
-      <h2>About</h2>
-      <p>Time Trial is an independent project by Amilcare G. Canali, an Italian triathlete and marathon runner, built for athletes who train seriously and want a tool that works for them — not the other way around.</p>
-      <p>The app is currently in development for iOS and Android, with a closed beta for athletes and coaches planned for 2027.</p>
-    </section>
-
-    <section class="block" id="contact">
-      <h2>Contact</h2>
-      <p>For questions, partnerships or to join the beta: <a href="mailto:info@amilcarecanali.com">info@amilcarecanali.com</a></p>
-    </section>
-
-    <footer>
-      © 2026 Amilcare G. Canali · P.IVA 09335660966 · <a href="privacy.html">Privacy policy</a>
-    </footer>
+  <div class="grid">
+    <div class="card"><h3>Every watch</h3><p>Garmin, Polar, Suunto, COROS, Wahoo, Hammerhead, Apple Watch and Android devices through Health Connect. Plus FIT, TCX and GPX files.</p></div>
+    <div class="card"><h3>Structured workouts on the phone</h3><p>Build intervals with targets in pace, power or heart rate, see the expected load, and compare each step with what you actually did.</p></div>
+    <div class="card"><h3>Your zones, your history</h3><p>Thresholds change over the season. Time Trial keeps them by date, so every activity is analysed with the values that were true that day.</p></div>
+    <div class="card"><h3>Coach mode</h3><p>Coaches plan and review from the web; athletes see everything on their phone. Data is shared only with the coach you choose.</p></div>
+    <div class="card"><h3>Recovery counts</h3><p>Sleep, HRV, weight, physiotherapy, massage and mobility sit in the same calendar as your training.</p></div>
+    <div class="card"><h3>Your data stays yours</h3><p>Stored in the European Union. Never sold, never used for advertising, never used to train AI models.</p></div>
   </div>
+
+  <section class="block" id="about">
+    <div class="card">
+      <h2>About</h2>
+      <p>Time Trial is built in Italy by Amilcare G. Canali, an endurance athlete who wanted one place for all his training data and a planning tool that works as well on a phone as on a computer.</p>
+      <p class="muted">Partners and platforms: for integration or API questions, write to <a href="mailto:info@amilcarecanali.com">info@amilcarecanali.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <a class="button" href="mailto:info@amilcarecanali.com">info@amilcarecanali.com</a>
+  </section>
+
+  <footer>
+    <p>Time Trial · Amilcare G. Canali, ditta individuale · P.IVA 09335660966 · Via Pietro Bembo 7, 20021 Bollate (MI), Italy</p>
+    <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  </footer>
+</div>
+<nav class="dock" aria-label="Site">
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+</nav>
 </body>
 </html>
