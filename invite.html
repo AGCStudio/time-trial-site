@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invitation · Time Trial</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E8E9EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap narrow legal">
+  <header class="top">
+    <a class="pill" href="index.html"><img src="icon.svg" alt="">Time Trial</a>
+    <span class="spacer"></span>
+    <span class="lang"><a class="circle" href="#en">EN</a><a class="circle" href="#it">IT</a></span>
+  </header>
+
+<section id="en">
+  <h1>You've been invited to Time Trial</h1>
+  <p class="updated">Coach ↔ athlete invitation</p>
+
+  <div class="card">
+    <h2>Your code</h2>
+    <p class="invite-code" data-code>—</p>
+    <p>Valid for 7 days, for one person.</p>
+  </div>
+
+  <div class="card">
+    <h2>How to use it</h2>
+    <ol>
+      <li><strong>If you are the athlete:</strong> open Time Trial → <strong>Profile</strong> (top right) → <strong>Your coaches</strong> → <strong>I have a code</strong>, enter the code and confirm what your coach will see.</li>
+      <li><strong>If you are the coach:</strong> open Time Trial → <strong>Athletes</strong> tab → <strong>I have a code</strong>. No Athletes tab? Enter the code from Profile → Your coaches → I have a code: the app will offer to turn on “I coach other athletes”.</li>
+    </ol>
+    <p>Time Trial is currently in private testing. If you don't have the app yet, ask the person who invited you.</p>
+  </div>
+
+  <div class="card">
+    <h2>Your data</h2>
+    <p>The athlete always confirms what the coach can see, and either of you can disconnect at any time. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+</section>
+
+<section id="it" lang="it">
+  <h1>Hai ricevuto un invito su Time Trial</h1>
+  <p class="updated">Invito coach ↔ atleta</p>
+
+  <div class="card">
+    <h2>Il tuo codice</h2>
+    <p class="invite-code" data-code>—</p>
+    <p>Valido 7 giorni, per una sola persona.</p>
+  </div>
+
+  <div class="card">
+    <h2>Come usarlo</h2>
+    <ol>
+      <li><strong>Se sei l'atleta:</strong> apri Time Trial → <strong>Profilo</strong> (in alto a destra) → <strong>I tuoi coach</strong> → <strong>Ho un codice</strong>, inserisci il codice e conferma cosa vedrà il coach.</li>
+      <li><strong>Se sei il coach:</strong> apri Time Trial → scheda <strong>Atleti</strong> → <strong>Ho un codice</strong>. Non vedi la scheda Atleti? Inserisci il codice da Profilo → I tuoi coach → Ho un codice: l'app ti proporrà di attivare «Alleno altri atleti».</li>
+    </ol>
+    <p>Time Trial è in fase di prova privata. Se non hai ancora l'app, chiedila a chi ti ha invitato.</p>
+  </div>
+
+  <div class="card">
+    <h2>I tuoi dati</h2>
+    <p>L'atleta conferma sempre cosa può vedere il coach, e ognuno dei due può scollegarsi quando vuole. Vedi l'<a href="privacy.html#it">Informativa sulla privacy</a>.</p>
+  </div>
+</section>
+
+  <footer>
+    <p>Time Trial · Amilcare G. Canali, ditta individuale · P.IVA 09335660966 · Via Pietro Bembo 7, 20021 Bollate (MI), Italy</p>
+    <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="delete-account.html">Delete account</a></p>
+  </footer>
+</div>
+<nav class="dock" aria-label="Site">
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+</nav>
+<script>
+  // Mostra il codice preso dal link (?c=ABCD-EFGH). Solo lettere e numeri: niente HTML dal link.
+  (function () {
+    var raw = new URLSearchParams(location.search).get('c') || '';
+    var c = raw.toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (c.length !== 8) return;
+    var pretty = c.slice(0, 4) + '-' + c.slice(4);
+    document.querySelectorAll('[data-code]').forEach(function (el) { el.textContent = pretty; });
+  })();
+</script>
+</body>
+</html>
