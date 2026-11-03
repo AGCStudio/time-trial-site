@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["GRVQV5952W.it.timetrial.timeTrial"],
+        "components": [
+          { "/": "/invite.html", "comment": "Invito coach-atleta: apre l'app sulla conferma" },
+          { "/": "/invite/*", "comment": "Forma breve per il futuro" }
+        ]
+      }
+    ]
+  }
+}
