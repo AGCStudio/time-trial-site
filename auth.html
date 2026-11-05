@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Trial</title>
+<meta name="robots" content="noindex">
+<!-- Il link contiene un codice monouso: non passarlo ad altri siti -->
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#E8E9EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hide { display: none; }
+  .auth .card { text-align: center; }
+  .auth .card .button { margin-top: 8px; }
+</style>
+</head>
+<body>
+<!--
+  Pagina di passaggio dei link delle email dell'app (05/11/2026).
+  Supabase verifica il link e poi rimanda qui (?t=signup|recovery|email&code=…).
+  - Telefono: apre subito l'app (timetrial://login-callback con gli stessi parametri),
+    con un pulsante di riserva se il browser blocca l'apertura automatica.
+  - Computer: spiega cosa fare. La conferma della registrazione e del cambio email
+    è già avvenuta sul server; per la nuova password serve il telefono.
+  - Errori (link scaduto o già usato): messaggio chiaro.
+  Nessuno script esterno, nessuna statistica: il codice non lascia questa pagina.
+-->
+<div class="wrap narrow legal auth">
+  <header class="top">
+    <a class="pill" href="index.html"><img src="icon.svg" alt="">Time Trial</a>
+  </header>
+
+  <h1 id="title"></h1>
+  <div class="card">
+    <p id="text"></p>
+    <p id="action" class="hide"><a class="button" id="open" href="#"></a></p>
+  </div>
+</div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  var type = q.get('t') || 'signup';
+  var err = q.get('error_code') || q.get('error') || h.get('error_code') || h.get('error');
+  var mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPad "desktop"
+  var it = (navigator.language || '').toLowerCase().indexOf('it') === 0;
+  document.documentElement.lang = it ? 'it' : 'en';
+
+  var T = it ? {
+    openTitle: 'Apertura di Time Trial…',
+    openText: 'Se l\'app non si apre da sola, tocca il pulsante.',
+    openBtn: 'Apri Time Trial',
+    signupTitle: 'Email confermata',
+    signupText: 'Ora apri Time Trial sul telefono e accedi con la tua email e la password.',
+    emailTitle: 'Nuova email confermata',
+    emailText: 'Da adesso accedi a Time Trial con il nuovo indirizzo.',
+    recoveryTitle: 'Apri il link dal telefono',
+    recoveryText: 'Per scegliere una nuova password apri questa email sul telefono dove hai Time Trial. Oppure chiedi un nuovo link dall\'app: Accedi → Password dimenticata.',
+    errTitle: 'Link scaduto o già usato',
+    errText: 'Chiedi un nuovo link dall\'app. Ogni link vale una sola volta e per poco tempo.'
+  } : {
+    openTitle: 'Opening Time Trial…',
+    openText: 'If the app doesn\'t open by itself, tap the button.',
+    openBtn: 'Open Time Trial',
+    signupTitle: 'Email confirmed',
+    signupText: 'Now open Time Trial on your phone and sign in with your email and password.',
+    emailTitle: 'New email confirmed',
+    emailText: 'From now on, sign in to Time Trial with your new address.',
+    recoveryTitle: 'Open the link on your phone',
+    recoveryText: 'To choose a new password, open this email on the phone where you have Time Trial. Or request a new link in the app: Sign in → Forgot password.',
+    errTitle: 'Link expired or already used',
+    errText: 'Request a new link in the app. Each link works only once and for a short time.'
+  };
+
+  function show(title, text, link) {
+    document.title = title + ' · Time Trial';
+    document.getElementById('title').textContent = title;
+    document.getElementById('text').textContent = text;
+    if (link) {
+      var a = document.getElementById('open');
+      a.href = link;
+      a.textContent = T.openBtn;
+      document.getElementById('action').classList.remove('hide');
+    }
+  }
+
+  if (mobile) {
+    // Stessi parametri all'app: anche gli errori, così l'app mostra il suo messaggio.
+    var app = 'timetrial://login-callback' + location.search + location.hash;
+    show(T.openTitle, T.openText, app);
+    location.replace(app);
+    return;
+  }
+  if (err) { show(T.errTitle, T.errText); return; }
+  if (type === 'recovery') { show(T.recoveryTitle, T.recoveryText); return; }
+  if (type === 'email') { show(T.emailTitle, T.emailText); return; }
+  show(T.signupTitle, T.signupText);
+})();
+</script>
+</body>
+</html>
