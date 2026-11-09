@@ -11,7 +11,7 @@
   --black: #000000;
   --white: #FFFFFF;
   /* Colore del cerchio e degli accenti: cipria dal 09/11/2026 (scelta di Amilcare).
-     Per tornare al rosa: --accento: #F4B6C8 e --link: #B3546F, e i file in img/rosa/. */
+     Per tornare al rosa: --accento: #F4B6C8 e --link: #B3546F, e i file in img/rosa/ (logo.svg, logo-negativo.svg, sigillo-vetro.png, anteprima.png: rinominarli nei link). */
   --accento: #EFD4CF;       /* mai testo su bianco */
   --link: var(--black);
   --cipria: #EFD4CF;        /* fondi; sopra solo testo nero */
