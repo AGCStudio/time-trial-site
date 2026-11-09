@@ -1,5 +1,5 @@
 /* Time Trial — stile del sito con l'identità di marca v2 (06/11/2026).
-   Bianco e nero come base, rosa #F4B6C8 solo come accento (max 10%),
+   Bianco e nero come base, cipria #EFD4CF come accento e per i fondi (dal 09/11/2026),
    cipria #EFD4CF per i fondi. Angoli 4 (schede) e 2 (pulsanti), nessuna ombra.
    Carattere: Inter (OFL, ospitato qui, nessun servizio esterno). Akkurat solo
    nel logo (tracciati), finché non c'è la licenza web. */
@@ -10,8 +10,10 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
-  --rosa: #F4B6C8;          /* accento: mai testo su bianco */
-  --rosa-testo: #B3546F;    /* rosa per testo su bianco (4,8:1) */
+  /* Colore del cerchio e degli accenti: cipria dal 09/11/2026 (scelta di Amilcare).
+     Per tornare al rosa: --accento: #F4B6C8 e --link: #B3546F, e i file in img/rosa/. */
+  --accento: #EFD4CF;       /* mai testo su bianco */
+  --link: var(--black);
   --cipria: #EFD4CF;        /* fondi; sopra solo testo nero */
   --g900: #141414;
   --g700: #3A3A3A;
@@ -43,7 +45,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--rosa-testo); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 16px; background: var(--black); color: var(--white); padding: 10px 14px; z-index: 10; }
 
@@ -62,7 +64,7 @@ header.top {
 nav.links { display: flex; gap: 22px; font-size: 15px; font-weight: 500; }
 nav.links a { text-decoration: none; }
 nav.links a:hover { text-decoration: underline; }
-nav.links a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--rosa); text-decoration-thickness: 3px; }
+nav.links a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accento); text-decoration-thickness: 3px; }
 .lang { display: flex; gap: 6px; }
 .circle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -87,7 +89,7 @@ p { margin: 0 0 14px; }
   font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
   border: 1px solid currentColor; border-radius: var(--r-btn); padding: 7px 12px;
 }
-.tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--rosa); }
+.tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accento); }
 
 .button {
   display: inline-flex; align-items: center; gap: 10px;
@@ -154,7 +156,7 @@ p { margin: 0 0 14px; }
 .legal .card p:last-child { margin-bottom: 0; }
 .legal section + section { margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--black); }
 .legal ul, .legal ol { padding-left: 22px; margin: 0 0 12px; }
-.legal a { color: var(--rosa-testo); font-weight: 500; }
+.legal a { color: var(--link); font-weight: 500; text-decoration-color: var(--g300); }
 .updated { color: var(--muted); margin: 0 0 28px; }
 .legal table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .legal th, .legal td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--g100); vertical-align: top; }
@@ -166,7 +168,7 @@ p { margin: 0 0 14px; }
 .legal .card p.invite-code {
   font-size: 44px; font-weight: 700; letter-spacing: 6px; text-align: center;
   font-variant-numeric: tabular-nums; margin: 8px 0 12px; color: var(--black);
-  background: var(--white); border-top: 4px solid var(--rosa); border-radius: var(--r-card); padding: 18px 8px;
+  background: var(--white); border-top: 4px solid var(--accento); border-radius: var(--r-card); padding: 18px 8px;
   user-select: all;
 }
 
@@ -178,7 +180,7 @@ footer.site p { margin: 0 0 8px; }
 footer.site a { color: var(--white); }
 footer.site nav { display: flex; flex-wrap: wrap; gap: 8px 22px; font-weight: 500; }
 footer.site nav a { text-decoration: none; }
-footer.site nav a:hover { text-decoration: underline; text-decoration-color: var(--rosa); }
+footer.site nav a:hover { text-decoration: underline; text-decoration-color: var(--accento); }
 @media (max-width: 760px) { footer.site .wrap { grid-template-columns: 1fr; } }
 
 @media print {
@@ -188,3 +190,4 @@ footer.site nav a:hover { text-decoration: underline; text-decoration-color: var
 }
 .legal .circle, .legal .brand { color: var(--black); font-weight: 700; }
 .legal .circle:hover { color: var(--white); }
+.hero :focus-visible, footer.site :focus-visible { outline-color: var(--white); }
