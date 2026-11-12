@@ -21,7 +21,7 @@
 <!-- ============================ ENGLISH ============================ -->
 <section id="en">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 9 November 2026</p>
+  <p class="updated">Last updated: 12 November 2026</p>
 
   <div class="card">
     <p>This policy explains how Time Trial ("the app", "we") collects, uses and protects your personal data. Time Trial is a mobile and web application for endurance athletes and coaches, currently in development. We wrote it to be readable: if anything is unclear, contact us.</p>
@@ -42,6 +42,7 @@
       <li><strong>Training data:</strong> planned and completed workouts, including structure, targets, time, distance, pace, speed, power, cadence, elevation and GPS route.</li>
       <li><strong>Health and wellness data:</strong> heart rate, heart rate variability (HRV), resting heart rate, sleep, body weight and body composition, perceived effort and how you feel. These are special categories of data under the GDPR and are processed only with your explicit consent.</li>
       <li><strong>Recovery sessions:</strong> physiotherapy, massage or mobility sessions you log, optionally with the name of the professional who treated you. This name is visible only to you and to a coach you connect with.</li>
+      <li><strong>Skipped workouts and breaks:</strong> if you mark a workout as skipped you can choose a reason (for example fatigue, commitments, weather, travel, pain or illness) and add a note; you can also record periods of rest, travel, injury or illness. Reasons such as pain, injury or illness are health data and are treated as such.</li>
       <li><strong>Notes and messages</strong> you write in the app or exchange with your coach.</li>
       <li><strong>Technical data:</strong> device type, operating system, app version and crash reports, used only to keep the app working.</li>
       <li><strong>Web app:</strong> in the browser we store only your login session (strictly necessary to keep you signed in; no tracking or advertising cookies).</li>
@@ -69,6 +70,7 @@
       <tr><td>Processing health data to calculate training load and adapt your plan</td><td>Your explicit consent (art. 9.2.a), which you can withdraw at any time</td></tr>
       <tr><td>Sharing your data with a coach you connect with</td><td>Your consent (art. 6.1.a and 9.2.a)</td></tr>
       <tr><td>AI coach features (explanations, workouts from text, plan suggestions)</td><td>Your explicit consent, asked before the first use; the app works fully without them</td></tr>
+      <tr><td>Reminders and alerts: a reminder the next morning when a planned workout has no outcome, alerts to your coach about new activities (one by one or as a summary at 8 pm), skipped workouts and breaks, and alerts when a coach–athlete connection is closed</td><td>Performance of the contract (art. 6.1.b); you choose which alerts you receive in Profile → Notifications</td></tr>
       <tr><td>Security, abuse prevention, fixing errors</td><td>Legitimate interest (art. 6.1.f)</td></tr>
       <tr><td>Subscriptions and invoices</td><td>Contract and legal obligations (art. 6.1.b and 6.1.c)</td></tr>
     </table>
@@ -82,7 +84,7 @@
       <li>We do not use your data to train AI models, and we require the same of our AI provider.</li>
       <li>We do not share your data with other users, except a coach you explicitly connect with.</li>
     </ul>
-    <p><strong>Coaches.</strong> You connect a coach with an invite code and confirm what they will see: your profile, activities (including those from connected devices), notes, perceived effort, thresholds and zones; they can also create and edit your planned workouts. A coach never sees your connections to partner services or your original files. You can disconnect a coach at any time in Profile → Your coaches: access ends immediately, and workouts the coach already created stay in your calendar.</p>
+    <p><strong>Coaches.</strong> You connect a coach with an invite code and confirm what they will see: your profile, activities (including those from connected devices), notes, perceived effort, thresholds and zones, and the reasons for skipped workouts and the breaks you record (including injury or illness); they can also create and edit your planned workouts. Your coach is notified when you skip a workout, record a break or close the connection. A coach never sees your connections to partner services or your original files. You can disconnect a coach at any time in Profile → Your coaches: access ends immediately, and workouts the coach already created stay in your calendar.</p>
     <p><strong>Invitations by email.</strong> If you enter someone's email address to invite them as your coach or athlete, we send them a single email from no-reply@timetrial.io with your name and the invitation code. We do not store their address: we keep only a one-way fingerprint (hash) for up to 30 days, to prevent too many invitations to the same person. Please invite only people who expect to hear from you.</p>
   </div>
 
@@ -102,8 +104,9 @@
     <ul>
       <li><strong>Supabase</strong> — database, authentication and file storage. Your data is stored in the European Union.</li>
       <li><strong>Brevo</strong> (France) — sending the app's automatic emails (account confirmation, password reset, email change) and of the invitations you choose to send. It receives only the recipient's email address, the language of the message and the content of that email; never your training or health data. Data stored in the European Union.</li>
-      <li><strong>Infomaniak</strong> (Infomaniak Network SA, Switzerland) — our mailboxes (support@, privacy@ and info@timetrial.io). If you write to us, your message, your email address and our reply are stored there. Switzerland is recognised by the European Commission as providing an adequate level of data protection.</li>
+      <li><strong>Infomaniak</strong> (Infomaniak Network SA, Switzerland) — our mailboxes (support@, privacy@ and info@timetrial.io). If you write to us, your message, your email address and our reply are stored there. Switzerland is recognised by the European Commission as providing an adequate level of data protection. Infomaniak also keeps a safety copy of profile photos and original activity files (Infomaniak Object Storage, Switzerland): the files are encrypted before they leave our servers, so Infomaniak cannot read them, and the copy is deleted within 30 days after the file is deleted in the app.</li>
       <li><strong>Cloudflare</strong> (Cloudflare, Inc.) — domain name, and hosting of the web version of the app (the app's files only: your data is not stored at Cloudflare and travels directly between your browser and Supabase). Cloudflare processes technical connection data such as IP address and browser type to deliver and protect the pages; during testing, access to the web app is restricted with Cloudflare Access, which also receives the email address used to sign in.</li>
+      <li><strong>OpenFreeMap</strong> (Hyperknot Software Kft., Hungary) — the background map under your activity routes. When you open a map, your device downloads map images directly from OpenFreeMap, which therefore receives the technical data of a normal web request (such as IP address and the map area requested); it never receives your route, account, training or health data. According to its privacy policy, OpenFreeMap does not keep IP addresses in its normal logs and deletes error logs, which may contain them, after 7 days. No account is needed.</li>
       <li><strong>Sentry</strong> (Functional Software, Inc.) — error reports, so we can fix crashes and bugs. A report contains only the type of error, the point in the app’s code where it happened and technical details such as phone model, operating system and app version; never your name, email, IP address, training or health data, or data from connected services. When a report arrives, Sentry derives from the connection only an approximate location (city and country) and then discards the IP address without storing it. Data stored in the European Union (Germany).</li>
       <li><strong>Apple</strong> (Apple Push Notification service) — only if you turn on notifications in the app: delivers notifications to your iPhone. Apple receives a code that identifies the app on your phone and the text of the notification, which only says who acted and what kind of alert it is (for example “Marco commented on your activity”); never workout names, sport, training or health data, or the text of comments. You can turn notifications off at any time in Profile → Notifications or in your phone’s Settings. On Android, notifications will be delivered by Google (Firebase Cloud Messaging) with the same limits.</li>
       <li><strong>Anthropic</strong> — AI features only, as described in section 6.</li>
@@ -126,7 +129,7 @@
 
   <div class="card">
     <h2>9. How long we keep data</h2>
-    <p>We keep your data while your account is active. If you delete your account, we delete your personal data within 30 days, except data we must keep by law (for example invoices, for the period required by Italian tax law). Backups are overwritten within a further 30 days.</p>
+    <p>We keep your data while your account is active. If you delete your account, we delete your personal data within 30 days, except data we must keep by law (for example invoices, for the period required by Italian tax law). Database backups are kept for 7 days and encrypted file copies are deleted within 30 days, so all copies are gone within a further 30 days.</p>
   </div>
 
   <div class="card">
@@ -168,7 +171,7 @@
 <!-- ============================ ITALIANO ============================ -->
 <section id="it" lang="it">
   <h1>Informativa sulla privacy</h1>
-  <p class="updated">Ultimo aggiornamento: 9 novembre 2026</p>
+  <p class="updated">Ultimo aggiornamento: 12 novembre 2026</p>
 
   <div class="card">
     <p>Questa informativa spiega come Time Trial ("l'app", "noi") raccoglie, usa e protegge i tuoi dati personali. Time Trial è un'applicazione mobile e web per atleti di endurance e coach, attualmente in sviluppo. L'abbiamo scritta per essere leggibile: se qualcosa non è chiaro, contattaci.</p>
@@ -189,6 +192,7 @@
       <li><strong>Dati di allenamento:</strong> allenamenti pianificati e svolti, con struttura, obiettivi, tempo, distanza, passo, velocità, potenza, cadenza, dislivello e percorso GPS.</li>
       <li><strong>Dati sanitari e di benessere:</strong> frequenza cardiaca, variabilità della frequenza cardiaca (HRV), frequenza a riposo, sonno, peso e composizione corporea, sforzo percepito e sensazioni. Sono categorie particolari di dati secondo il GDPR e li trattiamo solo con il tuo consenso esplicito.</li>
       <li><strong>Sedute di recupero:</strong> fisioterapia, massaggio o mobilità che registri, con il nome del professionista se scegli di inserirlo. Il nome è visibile solo a te e al coach a cui ti colleghi.</li>
+      <li><strong>Allenamenti saltati e pause:</strong> se segni un allenamento come saltato puoi scegliere un motivo (ad esempio stanchezza, impegni, meteo, viaggio, dolore o malattia) e aggiungere una nota; puoi anche segnare periodi di pausa, viaggio, infortunio o malattia. Motivi come dolore, infortunio o malattia sono dati sanitari e li trattiamo come tali.</li>
       <li><strong>Note e messaggi</strong> che scrivi nell'app o scambi con il tuo coach.</li>
       <li><strong>Dati tecnici:</strong> tipo di dispositivo, sistema operativo, versione dell'app e rapporti di errore, usati solo per far funzionare l'app.</li>
       <li><strong>Versione web:</strong> nel browser salviamo solo la tua sessione di accesso (strettamente necessaria per restare collegato; niente cookie di tracciamento o pubblicità).</li>
@@ -216,6 +220,7 @@
       <tr><td>Trattare i dati sanitari per calcolare il carico e adattare il piano</td><td>Tuo consenso esplicito (art. 9.2.a), revocabile in qualsiasi momento</td></tr>
       <tr><td>Condividere i dati con un coach a cui ti colleghi</td><td>Tuo consenso (art. 6.1.a e 9.2.a)</td></tr>
       <tr><td>Funzioni del coach AI (spiegazioni, allenamenti da testo, proposte sul piano)</td><td>Tuo consenso esplicito, chiesto prima del primo uso; l'app funziona completamente anche senza</td></tr>
+      <tr><td>Promemoria e avvisi: un promemoria la mattina dopo quando un allenamento pianificato non ha un esito, avvisi al tuo coach su attività nuove (una per una o con un riepilogo alle 20), allenamenti saltati e pause, e avvisi quando un collegamento tra coach e atleta viene chiuso</td><td>Esecuzione del contratto (art. 6.1.b); scegli tu quali avvisi ricevere in Profilo → Notifiche</td></tr>
       <tr><td>Sicurezza, prevenzione di abusi, correzione di errori</td><td>Legittimo interesse (art. 6.1.f)</td></tr>
       <tr><td>Abbonamenti e fatture</td><td>Contratto e obblighi di legge (art. 6.1.b e 6.1.c)</td></tr>
     </table>
@@ -229,7 +234,7 @@
       <li>Non usiamo i tuoi dati per addestrare modelli di AI, e chiediamo lo stesso al nostro fornitore di AI.</li>
       <li>Non condividiamo i tuoi dati con altri utenti, salvo il coach a cui ti colleghi esplicitamente.</li>
     </ul>
-    <p><strong>Coach.</strong> Ti colleghi a un coach con un codice d'invito e confermi cosa vedrà: profilo, attività (anche quelle dai dispositivi collegati), note, fatica percepita, soglie e zone; potrà anche creare e modificare i tuoi allenamenti pianificati. Il coach non vede mai i tuoi collegamenti ai servizi dei partner né i file originali. Puoi scollegarlo in qualsiasi momento da Profilo → I tuoi coach: l'accesso finisce subito e gli allenamenti già creati restano nel tuo calendario.</p>
+    <p><strong>Coach.</strong> Ti colleghi a un coach con un codice d'invito e confermi cosa vedrà: profilo, attività (anche quelle dai dispositivi collegati), note, fatica percepita, soglie e zone, e i motivi degli allenamenti saltati e le pause che segni (compresi infortunio o malattia); potrà anche creare e modificare i tuoi allenamenti pianificati. Il coach riceve un avviso quando salti un allenamento, segni una pausa o chiudi il collegamento. Il coach non vede mai i tuoi collegamenti ai servizi dei partner né i file originali. Puoi scollegarlo in qualsiasi momento da Profilo → I tuoi coach: l'accesso finisce subito e gli allenamenti già creati restano nel tuo calendario.</p>
     <p><strong>Inviti per email.</strong> Se inserisci l'indirizzo email di una persona per invitarla come tuo coach o atleta, le mandiamo una sola email da no-reply@timetrial.io con il tuo nome e il codice d'invito. Non salviamo il suo indirizzo: conserviamo solo un'impronta non reversibile (hash) per al massimo 30 giorni, per evitare troppi inviti alla stessa persona. Invita solo persone che si aspettano di sentirti.</p>
   </div>
 
@@ -249,8 +254,9 @@
     <ul>
       <li><strong>Supabase</strong> — database, autenticazione e archiviazione file. I tuoi dati sono conservati nell'Unione Europea.</li>
       <li><strong>Brevo</strong> (Francia) — invio delle email automatiche dell'app (conferma dell'account, reimpostazione della password, cambio email) e degli inviti che scegli di mandare. Riceve solo l'indirizzo email del destinatario, la lingua del messaggio e il contenuto di quell'email; mai i tuoi dati di allenamento o di salute. Dati conservati nell'Unione Europea.</li>
-      <li><strong>Infomaniak</strong> (Infomaniak Network SA, Svizzera) — le nostre caselle email (support@, privacy@ e info@timetrial.io). Se ci scrivi, il tuo messaggio, il tuo indirizzo email e la nostra risposta sono conservati lì. La Svizzera è riconosciuta dalla Commissione Europea come paese con un livello adeguato di protezione dei dati.</li>
+      <li><strong>Infomaniak</strong> (Infomaniak Network SA, Svizzera) — le nostre caselle email (support@, privacy@ e info@timetrial.io). Se ci scrivi, il tuo messaggio, il tuo indirizzo email e la nostra risposta sono conservati lì. La Svizzera è riconosciuta dalla Commissione Europea come paese con un livello adeguato di protezione dei dati. Infomaniak conserva anche una copia di sicurezza delle foto del profilo e dei file originali delle attività (Infomaniak Object Storage, Svizzera): i file vengono cifrati prima di lasciare i nostri server, quindi Infomaniak non può leggerli, e la copia viene cancellata entro 30 giorni dalla cancellazione del file nell'app.</li>
       <li><strong>Cloudflare</strong> (Cloudflare, Inc.) — nome a dominio e pubblicazione della versione web dell'app (solo i file dell'app: i tuoi dati non sono conservati presso Cloudflare e viaggiano direttamente tra il tuo browser e Supabase). Cloudflare tratta dati tecnici di connessione come indirizzo IP e tipo di browser per consegnare e proteggere le pagine; durante la fase di prova l'accesso alla versione web è limitato con Cloudflare Access, che riceve anche l'email usata per entrare.</li>
+      <li><strong>OpenFreeMap</strong> (Hyperknot Software Kft., Ungheria) — la mappa di sfondo sotto i percorsi delle attività. Quando apri una mappa, il tuo dispositivo scarica le immagini della mappa direttamente da OpenFreeMap, che riceve quindi i dati tecnici di una normale richiesta web (come indirizzo IP e zona della mappa richiesta); non riceve mai il tuo percorso, i dati dell'account, di allenamento o di salute. Secondo la sua informativa, OpenFreeMap non conserva gli indirizzi IP nei registri ordinari e cancella dopo 7 giorni i registri degli errori, che possono contenerli. Non serve alcun account.</li>
       <li><strong>Sentry</strong> (Functional Software, Inc.) — segnalazioni degli errori, per correggere blocchi e malfunzionamenti. Una segnalazione contiene solo il tipo di errore, il punto del codice dell’app in cui è avvenuto e dati tecnici come modello del telefono, sistema operativo e versione dell’app; mai il tuo nome, la tua email, l’indirizzo IP, dati di allenamento o di salute, o dati dei servizi collegati. Quando una segnalazione arriva, Sentry ricava dal collegamento solo una posizione approssimativa (città e paese) e poi scarta l’indirizzo IP senza conservarlo. Dati conservati nell’Unione Europea (Germania).</li>
       <li><strong>Apple</strong> (servizio di notifiche push di Apple) — solo se accendi le notifiche nell'app: consegna le notifiche al tuo iPhone. Apple riceve un codice che identifica l'app sul tuo telefono e il testo della notifica, che dice solo chi ha agito e che tipo di avviso è (per esempio “Marco ha commentato la tua attività”); mai nomi degli allenamenti, sport, dati di allenamento o di salute, o il testo dei commenti. Puoi spegnere le notifiche in qualsiasi momento da Profilo → Notifiche o dalle Impostazioni del telefono. Su Android le notifiche saranno consegnate da Google (Firebase Cloud Messaging) con gli stessi limiti.</li>
       <li><strong>Anthropic</strong> — solo per le funzioni di AI, come descritto nella sezione 6.</li>
@@ -273,7 +279,7 @@
 
   <div class="card">
     <h2>9. Per quanto tempo conserviamo i dati</h2>
-    <p>Conserviamo i dati finché il tuo account è attivo. Se elimini l'account, cancelliamo i tuoi dati personali entro 30 giorni, salvo quelli che dobbiamo conservare per legge (ad esempio le fatture, per il periodo previsto dalla normativa fiscale italiana). Le copie di backup vengono sovrascritte entro ulteriori 30 giorni.</p>
+    <p>Conserviamo i dati finché il tuo account è attivo. Se elimini l'account, cancelliamo i tuoi dati personali entro 30 giorni, salvo quelli che dobbiamo conservare per legge (ad esempio le fatture, per il periodo previsto dalla normativa fiscale italiana). I backup del database sono conservati per 7 giorni e le copie cifrate dei file vengono cancellate entro 30 giorni: tutte le copie spariscono quindi entro ulteriori 30 giorni.</p>
   </div>
 
   <div class="card">
